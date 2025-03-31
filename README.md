@@ -57,10 +57,11 @@ An SAP Fiori application.
 ```
 
 #### comment gitfillColor() in  jspdfautotablemin.js
-```json
-            // doc.getDocument().setFillColor(doc.getDocument().getFillColor());
-
-```
+> ### line 2653
+>```json
+>            // doc.getDocument().setFillColor(doc.>getDocument().getFillColor());
+>
+>```
 
 ## USAGE
 ```js
