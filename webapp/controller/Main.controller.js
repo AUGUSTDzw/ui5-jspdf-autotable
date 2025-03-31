@@ -26,19 +26,19 @@ sap.ui.define(
 
           doc.text("Hello, World!", 10, 10, {});
 
-          // autoTable(doc, {
-          //   head: [["Name", "Email", "Country"]],
-          //   body: [
-          //     ["David", "david@example.com", "Sweden"],
-          //     ["Castille", "castille@example.com", "Spain"],
-          //     // ...
-          //   ],
-          // });
+          autoTable(doc, {
+            head: [["Name", "Email", "Country"]],
+            body: [
+              ["David", "david@example.com", "Sweden"],
+              ["Castille", "castille@example.com", "Spain"],
+              // ...
+            ],
+          });
           // doc.table(0, 0, data);
           // doc.autoTa=ble(columns, data);
           // autoTable(doc, { html: '#idPDFTable' })
 
-          autoTable(doc, { head: [["Carrid", "Carrname", "Currcode", "Url"]], body: data });
+          // autoTable(doc, { head: [["Carrid", "Carrname", "Currcode", "Url"]], body: data });
           doc.save("DemoData.pdf");
           // doc.autoTable(columns, data);
           // PdfCreator.createPdfDoc(data);
