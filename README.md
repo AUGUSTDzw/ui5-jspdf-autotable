@@ -39,4 +39,50 @@ An SAP Fiori application.
 
 1. Active NodeJS LTS (Long Term Support) version and associated supported NPM version.  (See https://nodejs.org)
 
+---
+### manifest.json
+#### add jspdf + autotable js
+```json
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ],
+      "js": [
+        { "uri": "libs/jsPDF.js" },
+        { "uri": "libs/jspdfautotablemin.js" }
+      ]
+    },
+```
+
+#### comment gitfillColor() in  jspdfautotablemin.js
+```json
+            // doc.getDocument().setFillColor(doc.getDocument().getFillColor());
+
+```
+
+## USAGE
+```js
+   var doc = new jsPDF("p", "pt");
+
+   doc.text("Hello, World!", 10, 10, {});
+
+   autoTable(doc, {
+      head: [["Name", "Email", "Country"]],
+      body: [
+        ["David", "david@example.com", "Sweden"],
+        ["Castille", "castille@example.com", "Spain"],
+        // ...
+      ],
+   });
+
+```
+
+### Result example
+![alt text](img/pdf-demo-result.png)
+
+
+
+
 

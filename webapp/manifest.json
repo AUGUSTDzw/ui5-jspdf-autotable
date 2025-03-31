@@ -82,6 +82,7 @@
         }
       ],
       "js": [
+        { "uri": "libs/jsPDF.js" },
         { "uri": "libs/jspdfautotablemin.js" }
       ]
     },
