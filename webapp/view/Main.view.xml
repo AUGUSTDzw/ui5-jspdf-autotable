@@ -1,0 +1,57 @@
+<mvc:View controllerName="com.dzw.docexport.controller.Main"
+          xmlns:mvc="sap.ui.core.mvc"
+          displayBlock="true"
+          xmlns="sap.m">
+    <Page id="page"
+          title="{i18n>title}">
+        <content>
+            <Table id="idPDFTable"
+                   items="{/AirlineSet}">
+                <headerToolbar>
+                    <Toolbar id="_IDGenToolbar1">
+                        <Title id="_IDGenTitle"
+                               level="H2"
+                               text="PDF Table" />
+                        <ToolbarSpacer id="_IDGenToolbarSpacer"></ToolbarSpacer>
+                        <Button id="_IDGenButton"
+                                icon="sap-icon://download"
+                                press="onDataExportPDF" />
+                    </Toolbar>
+                </headerToolbar>
+                <columns>
+                    <Column id="_IDGenColumn"
+                            width="12em">
+                        <Text id="_IDGenText"
+                              text="Carrid" />
+                    </Column>
+                    <Column id="_IDGenColumn1">
+                        <Text id="_IDGenText1"
+                              text="Carrname" />
+                    </Column>
+                    <Column id="_IDGenColumn2">
+                        <Text id="_IDGenText2"
+                              text="Currcode" />
+                    </Column>
+                    <Column id="_IDGenColumn3">
+                        <Text id="_IDGenText3"
+                              text="Url" />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="_IDGenColumnListItem">
+                        <cells>
+                            <Text id="_IDGenText4"
+                                  text="{Carrid}" />
+                            <Text id="_IDGenText5"
+                                  text="{Carrname}" />
+                            <Text id="_IDGenText6"
+                                  text="{Currcode}" />
+                            <Text id="_IDGenText7"
+                                  text="{Url}" />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>
